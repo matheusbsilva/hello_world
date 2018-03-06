@@ -1,0 +1,10 @@
+<h1> Hello World! </h1>
+<p>What's your name?</p>
+<form action="{% url 'helloworld:hello_world'%}" method="post">
+  {% csrf_token %}
+  {{ form.name }}
+  <input type="submit" value="Say Hello!">
+</form>
+
+<p>Hello <strong>{{name}}</strong> !!</p>
+
